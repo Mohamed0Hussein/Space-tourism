@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Custom Fonts */
+@font-face {
+  font-family: Bellefair;
+  src: url("./assets/fonts/Bellefair-Regular.ttf")
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("./assets/fonts/Barlow-Regular.ttf")
+}
+
+@font-face {
+  font-family: BarlowCondensed;
+  src: url("./assets/fonts/BarlowCondensed-Regular.ttf")
+}
+
+@font-face {
+  font-family: Test;
+  src: url("./assets/fonts/Bytesized-Regular.ttf")
+}
+
+@theme{
+  --font-bellefair: Bellefair, "sans-serif"
+}
+@theme{
+  --font-test: Test, "sans-serif"
+}
+@theme{
+  --font-barlow: Barlow, "sans-serif"
+}
+@theme{
+  --font-barlow-condensed: BarlowCondensed, "sans-serif"
+}
