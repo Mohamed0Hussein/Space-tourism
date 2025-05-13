@@ -1,10 +1,10 @@
-import LogoImg from './../assets/shared/logo.svg?react'
+import LogoImg from '../assets/shared/logo.svg'
 
 const Icon = ({icon, className , ...rest} : LogoProps) => {
 
     switch(icon){
         case "logo":
-            return <LogoImg className={className} style={{height:48,width:60}} {...rest}/>
+            return <img src={LogoImg} className={className} style={{height:48,width:48}} {...rest}/>
 
     }
 }
