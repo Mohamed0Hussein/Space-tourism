@@ -2,23 +2,11 @@ import Icon from '../components/Icon';
 import NavigationMenu from '../components/NavigationMenu';
 import { Outlet } from "react-router";
 import { ROUTE_PATHS } from '../utils/routePaths';
-import { useMemo } from 'react';
 import { useLocation } from "react-router";
 import cn from 'classnames'
 
 const Home = () => {
   const location = useLocation()
-  const bgPath = useMemo(() => {
-    switch(location.pathname){
-      case ROUTE_PATHS.HOME:
-        return "src/assets/home/background-home-";
-      case ROUTE_PATHS.DESTINATION:
-        return "src/assets/destination/background-destination-";
-      default:
-        return "src/assets/home/background-home-";
-    }
-  }, [location.pathname]);
-
   return (
     <div className={cn("flex flex-col w-full min-h-screen bg-no-repeat bg-cover bg-center ",
       {"bg-[url('src/assets/home/background-home-mobile.jpg')] md:bg-[url('src/assets/home/background-home-desktop.jpg')] sm:bg-[url('src/assets/home/background-home-tablet.jpg')]" : location.pathname === ROUTE_PATHS.HOME },

@@ -7,9 +7,10 @@ type PaginationProps = {
   pageSize: number;
   totalItems: number;
   onClick?: (page: number) => void;
+  className?: string
 };
 
-const LargePagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onClick }) => {
+const LargePagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onClick, className }) => {
   const [selectedPage, setSelectedPage] = useState(0);
 
   const pageCount = useMemo(() => Math.ceil(totalItems / pageSize), [pageSize, totalItems]);
@@ -20,7 +21,7 @@ const LargePagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onCl
   };
 
   return (
-    <div className="flex flex-row gap-10">
+    <div className={cn("flex flex-row gap-10",className)}>
       {Array.from({ length: pageCount }, (_, i) => (
         <Typography
           key={i}

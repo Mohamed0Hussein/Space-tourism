@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import cn from "classnames";
 import { FiMenu, FiX } from "react-icons/fi"; 
@@ -56,8 +56,14 @@ type MenuProps = {
 
 const NavigationMenu = ({ menuClassName, itemClassName }: MenuProps) => {
   const location = useLocation()
-  const currentPath = location.pathname;
-  const [selectedItemId, setSelectedItemId] = useState(tabs.find(tab => tab.path === currentPath)?.id);
+  const [selectedItemId, setSelectedItemId] = useState(
+    tabs.find(tab => tab.path === location.pathname)?.id
+  );
+  
+  useEffect(() => {
+    const matchedTab = tabs.find(tab => tab.path === location.pathname);
+    setSelectedItemId(matchedTab?.id);
+  }, [location.pathname]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

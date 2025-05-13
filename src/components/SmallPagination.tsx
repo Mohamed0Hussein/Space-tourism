@@ -5,9 +5,10 @@ type PaginationProps = {
   pageSize: number;
   totalItems: number;
   onClick?: (page: number) => void;
+  className?: string;
 };
 
-const SmallPagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onClick }) => {
+const SmallPagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onClick, className }) => {
   const [selectedPage, setSelectedPage] = useState(0);
 
   const pageCount = useMemo(() => Math.ceil(totalItems / pageSize), [pageSize, totalItems]);
@@ -18,7 +19,7 @@ const SmallPagination: React.FC<PaginationProps> = ({ pageSize, totalItems, onCl
   };
 
   return (
-    <div className="flex flex-row gap-[54px]">
+    <div className={cn("flex flex-row gap-[54px]",className)}>
       {Array.from({ length: pageCount }, (_, i) => (
         <div
           key={i}
