@@ -1,4 +1,4 @@
-import LogoImg from '../assets/shared/logo.svg'
+import LogoImg from '/assets/shared/logo.svg'
 
 const Icon = ({icon, className , ...rest} : LogoProps) => {
 

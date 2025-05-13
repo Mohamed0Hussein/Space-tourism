@@ -9,10 +9,10 @@ const Home = () => {
   const location = useLocation()
   return (
     <div className={cn("flex flex-col w-full min-h-screen bg-no-repeat bg-cover bg-center ",
-      {"bg-[url('src/assets/home/background-home-mobile.jpg')] md:bg-[url('src/assets/home/background-home-desktop.jpg')] sm:bg-[url('src/assets/home/background-home-tablet.jpg')]" : location.pathname === ROUTE_PATHS.HOME },
-      {"bg-[url('src/assets/destination/background-destination-mobile.jpg')] md:bg-[url('src/assets/destination/background-destination-desktop.jpg')] sm:bg-[url('src/assets/destination/background-destination-tablet.jpg')]" : location.pathname === ROUTE_PATHS.DESTINATION },
-      {"bg-[url('src/assets/crew/background-crew-mobile.jpg')] md:bg-[url('src/assets/crew/background-crew-desktop.jpg')] sm:bg-[url('src/assets/crew/background-crew-tablet.jpg')]" : location.pathname === ROUTE_PATHS.CREW },
-      {"bg-[url('src/assets/technology/background-technology-mobile.jpg')] md:bg-[url('src/assets/technology/background-technology-desktop.jpg')] sm:bg-[url('src/assets/technology/background-technology-tablet.jpg')]" : location.pathname === ROUTE_PATHS.TECHNOLOGY },
+      {"bg-[url('/assets/home/background-home-mobile.jpg')] lg:bg-[url('/assets/home/background-home-desktop.jpg')] md:bg-[url('/assets/home/background-home-tablet.jpg')]" : location.pathname === ROUTE_PATHS.HOME },
+      {"bg-[url('/assets/destination/background-destination-mobile.jpg')] lg:bg-[url('/assets/destination/background-destination-desktop.jpg')] md:bg-[url('/assets/destination/background-destination-tablet.jpg')]" : location.pathname === ROUTE_PATHS.DESTINATION },
+      {"bg-[url('/assets/crew/background-crew-mobile.jpg')] lg:bg-[url('/assets/crew/background-crew-desktop.jpg')] md:bg-[url('/assets/crew/background-crew-tablet.jpg')]" : location.pathname === ROUTE_PATHS.CREW },
+      {"bg-[url('/assets/technology/background-technology-mobile.jpg')] lg:bg-[url('/assets/technology/background-technology-desktop.jpg')] md:bg-[url('/assets/technology/background-technology-tablet.jpg')]" : location.pathname === ROUTE_PATHS.TECHNOLOGY },
       )}>
       <header className="flex items-center justify-between mt-6 md:mt-10 px-6 md:px-10 lg:px-16">
         <div className="flex items-center w-full gap-6 md:gap-16">
