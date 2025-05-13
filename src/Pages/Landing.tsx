@@ -8,9 +8,7 @@ const Landing = () => {
     let navigate = useNavigate()
   return (
     <>
-        {/* Content */}
         <main className="flex flex-1 flex-col lg:flex-row items-center justify-center lg:justify-between px-6 md:px-20 lg:px-[165px] py-16 md:py-24 lg:py-32 gap-10 md:gap-20 lg:gap-0">
-            {/* Text Content */}
             <div className="text-center lg:text-left max-w-[450px] lg:max-w-[540px]">
             <Typography className="text-[#D0D6F9]" preset={5}>
                 SO, YOU WANT TO TRAVEL TO
@@ -23,7 +21,6 @@ const Landing = () => {
             </Typography>
             </div>
 
-            {/* Explore Button */}
             <div className="mt-10 md:mt-16 lg:mt-0 lg:ml-10">
             <DisplayButtonStates onClick={() => navigate(ROUTE_PATHS.DESTINATION)}>EXPLORE</DisplayButtonStates>
             </div>

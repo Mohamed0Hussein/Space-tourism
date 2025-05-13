@@ -16,7 +16,7 @@ const TabsMenu = ({ menuClassName, itemClassName,menu = [], onChange}: TabsMenuP
 
   return (
     <div className={cn(
-      "flex flex-col sm:flex-row gap-[32px] sm:gap-[48px] cursor-pointer",
+      "flex flex-row gap-[32px] sm:gap-[48px] cursor-pointer justify-center lg:justify-start ",
       menuClassName
     )}>
       {menu.map((tab,id) => {
@@ -31,12 +31,12 @@ const TabsMenu = ({ menuClassName, itemClassName,menu = [], onChange}: TabsMenuP
             className={cn(
               `
                 flex flex-row items-center gap-[12px]
-                w-[222px] h-[19px] sm:w-max sm:h-[32px]
+                w-min h-[19px] sm:w-max sm:h-[32px]
                 transition-all duration-200 box-content
               `,
               {
-                "border-r-[3px] sm:border-b-[3px] sm:border-r-0 border-white text-white": isSelected,
-                "hover:border-r-[3px] sm:hover:border-b-[3px] sm:hover:border-r-0 hover:border-[rgba(255,255,255,0.5)] text-[#D0D6F9]": !isSelected,
+                " border-b-[3px]  border-white text-white": isSelected,
+                " hover:border-b-[3px]  hover:border-[rgba(255,255,255,0.5)] text-[#D0D6F9]": !isSelected,
               },
               itemClassName
             )}
